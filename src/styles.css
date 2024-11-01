@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #0B3D91;
+  background-image: url('assets/nebula-image.jpg');
+  background-size: cover;
+}
+
+.menu-item {
+  color: #FFFFFF;
+  text-shadow: 0 0 10px #FF4081, 0 0 20px #FF4081, 0 0 30px #FF4081;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+  color: #FFC107;
+  text-shadow: 0 0 10px #FFC107, 0 0 20px #FFC107, 0 0 30px #FFC107;
+}
+
+
+.button {
+  background-color: transparent;
+  border: 2px solid #FFC107;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+
+.button:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 193, 7, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+
+.button:hover:before {
+  transform: translate(-50%, -50%) scale(1);
+}
